@@ -1,0 +1,48 @@
+﻿<Page
+    x:Class="DoomEternalSpeedrunHelper2.Views.MacroPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Style="{StaticResource PageStyle}"
+    mc:Ignorable="d">
+
+    <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}">
+        <Grid Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
+            <StackPanel Margin="24" Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <ToggleButton
+                        Name="isEnabledButton"
+                        Width="100"
+                        Height="32"
+                        Checked="IsEnabledButton_OnChecked"
+                        Content="Disabled"
+                        IsChecked="False"
+                        Unchecked="IsEnabledButton_OnUnchecked" />
+                </StackPanel>
+                <TextBlock Margin="0,24,0,12" FontSize="18">Keybind</TextBlock>
+                <TextBox
+                    x:Name="macroKeybind"
+                    Width="100"
+                    Padding="5"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    GotFocus="MacroKeybind_OnGotFocus"
+                    PlaceholderText="Enter key..."
+                    PreviewKeyDown="MacroKeybind_OnPreviewKeyDown" />
+                <TextBlock Margin="0,24,0,12" FontSize="18">Scroll Direction</TextBlock>
+                <RadioButton
+                    Name="scrollUp"
+                    Checked="ScrollUp_OnChecked"
+                    Content="Up"
+                    GroupName="scrollDirection" />
+                <RadioButton
+                    Name="scrollDown"
+                    Checked="ScrollDown_OnChecked"
+                    Content="Down"
+                    GroupName="scrollDirection" />
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</Page>
