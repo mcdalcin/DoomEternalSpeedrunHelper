@@ -41,6 +41,6 @@
 		<PRIResource Include="Strings\en-us\Resources.resw" />
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\DoomEternalSpeedrunHelper2.Core\DoomEternalSpeedrunHelper2.Core.csproj" />
+		<ProjectReference Include="..\DoomEternalSpeedrunHelper2.Core\DoomEternalSpeedrunHelper.Core.csproj" />
 	</ItemGroup>
 </Project>
